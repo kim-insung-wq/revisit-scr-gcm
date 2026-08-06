@@ -157,9 +157,9 @@ python code/4_extract.py
 
 The 32 detected boundaries are applied to all 18 captured 32-bit multiplications:
 
-\[
+$$
 32 \times 18 = 576.
-\]
+$$
 
 The complete operation windows are retained for inspection, while an 81-sample region from each operation is used as the autoencoder input.
 
@@ -206,10 +206,10 @@ One global two-cluster K-means model is applied to all 576 latent vectors. Clust
 
 For internal 32-bit limbs \(b_0,b_1,b_2,b_3\), the nine multiplier operands are
 
-\[
+$$
 b_0,\ b_1,\ b_0\oplus b_1,\ b_2,\ b_3,\ b_2\oplus b_3,\
 b_0\oplus b_2,\ b_1\oplus b_3,\ b_0\oplus b_1\oplus b_2\oplus b_3.
-\]
+$$
 
 The oriented labels recover the four limbs, which are combined and converted from the implementation bit order to the standard GHASH representation.
 
