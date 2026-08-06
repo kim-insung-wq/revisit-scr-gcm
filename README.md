@@ -16,9 +16,9 @@ The acquisition settings are:
 
 For one ciphertext block without AAD, GHASH performs two 128-bit multiplications. Each is decomposed into nine 32-bit Karatsuba multiplications, and each 32-bit multiplication contains 32 partial products. The dataset therefore yields
 
-\[
-2 \times 9 \times 32 = 576
-\]
+$$
+2\times9\times32=576
+$$
 
 subtraces.
 
@@ -158,7 +158,7 @@ python code/4_extract.py
 The 32 detected boundaries are applied to all 18 captured 32-bit multiplications:
 
 $$
-2\times9\times32=576
+32\times18=576.
 $$
 
 The complete operation windows are retained for inspection, while an 81-sample region from each operation is used as the autoencoder input.
