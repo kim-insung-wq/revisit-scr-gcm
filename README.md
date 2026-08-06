@@ -16,9 +16,9 @@ The acquisition settings are:
 
 For one ciphertext block without AAD, GHASH performs two 128-bit multiplications. Each is decomposed into nine 32-bit Karatsuba multiplications, and each 32-bit multiplication contains 32 partial products. The dataset therefore yields
 
-$$
-2\times9\times32=576
-$$
+\[
+2 \times 9 \times 32 = 576
+\]
 
 subtraces.
 
@@ -157,9 +157,9 @@ python code/4_extract.py
 
 The 32 detected boundaries are applied to all 18 captured 32-bit multiplications:
 
-$$
-32\times18=576.
-$$
+\[
+32 \times 18 = 576.
+\]
 
 The complete operation windows are retained for inspection, while an 81-sample region from each operation is used as the autoencoder input.
 
@@ -206,10 +206,10 @@ One global two-cluster K-means model is applied to all 576 latent vectors. Clust
 
 For internal 32-bit limbs \(b_0,b_1,b_2,b_3\), the nine multiplier operands are
 
-$$
-b_0,\ b_1,\ b_0\oplus b_1,\ b_2,\ b_3,\ b_2\oplus b_3,\ 
+\[
+b_0,\ b_1,\ b_0\oplus b_1,\ b_2,\ b_3,\ b_2\oplus b_3,\
 b_0\oplus b_2,\ b_1\oplus b_3,\ b_0\oplus b_1\oplus b_2\oplus b_3.
-$$
+\]
 
 The oriented labels recover the four limbs, which are combined and converted from the implementation bit order to the standard GHASH representation.
 
@@ -279,7 +279,7 @@ The connection between stages is:
 
 Thus, running a later stage by itself works only when its prerequisite files have already been generated. `run.py` handles this ordering automatically.
 
-## figures
+## Interactive figures
 
 By default, figures are saved under `outputs/figures/` without blocking execution. To also display the figure produced by a stage, add `--show`:
 

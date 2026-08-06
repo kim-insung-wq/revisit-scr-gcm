@@ -1,0 +1,30 @@
+{
+  "scenario": "GHASH with no AAD and one 128-bit ciphertext block",
+  "c1_hex": "B832EB7ACB03B2A9347A6FDE1E121151",
+  "length_block_hex": "00000000000000000000000000000080",
+  "adc_frequency_hz": 200000000.0,
+  "target_clock_hz": 7407407.407407408,
+  "samples_per_cycle": 27.0,
+  "karatsuba_pair_names": [
+    "low_a0_b0",
+    "low_a1_b1",
+    "low_cross",
+    "high_a2_b2",
+    "high_a3_b3",
+    "high_cross",
+    "middle_a0xa2_b0xb2",
+    "middle_a1xa3_b1xb3",
+    "middle_cross"
+  ],
+  "public_stage1_a32_hex": [
+    "5ED74C1D",
+    "954DC0D3",
+    "CB9A8CCE",
+    "7BF65E2C",
+    "8A884878",
+    "F17E1654",
+    "25211231",
+    "1FC588AB",
+    "3AE49A9A"
+  ]
+}
