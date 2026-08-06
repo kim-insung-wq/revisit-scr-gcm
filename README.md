@@ -16,9 +16,9 @@ The acquisition settings are:
 
 For one ciphertext block without AAD, GHASH performs two 128-bit multiplications. Each is decomposed into nine 32-bit Karatsuba multiplications, and each 32-bit multiplication contains 32 partial products. The dataset therefore yields
 
-\[
+$$
 2 \times 9 \times 32 = 576
-\]
+$$
 
 subtraces.
 
