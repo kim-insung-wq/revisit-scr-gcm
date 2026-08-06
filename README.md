@@ -170,6 +170,7 @@ outputs/04_full_operation_crops.npz
 outputs/04_extraction_summary.json
 outputs/figures/04_extracted_subtraces.png
 ```
+> **Remark on autoencoder hyperparameters.** Because the traces in this artifact were newly acquired using a ChipWhisperer XMEGA target and CW-Husky rather than taken directly from the original KLA-SCARF dataset, their sampling rate, trace length, noise characteristics, and temporal alignment differ from those reported in the original paper. Consequently, the subtrace length, network architecture, training parameters, and ensemble configuration were adjusted for the reproduced dataset. These changes adapt the autoencoder to the measurement characteristics of the new raw traces; they do not change the underlying attack procedure, which still consists of partial-product localization, subtrace extraction, unsupervised feature learning, global two-cluster classification, and consistency-based recovery of (H).
 
 ### Step 5. Train the denoising-autoencoder ensemble
 
